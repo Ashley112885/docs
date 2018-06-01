@@ -209,6 +209,12 @@ If you wish to set a true temporary target while offline, you can do so by ssh'i
 
 ********************************
 
+### Using Fakemeter
+
+This program is automatically insalled by default with oref0 0.7.0-dev and will send the last BG reading to the pump when offline. You can enable this feature by going to Utilities screen on the pump then Connected Devices>Meters>On, then Add ID <000000>. You can then see the current BG on pump by pressing the ESC button (first line under Status). Note: it does prdocue a recurring "beep," so if you find that to be annoying might be best to only use when offline. 
+
+If using recommendations from Bolus Wizard while using Fakemeter, it's recommended that you set the high end of your Bolus Wizard target range to something really high to prevent the Bolus Wizard from trying to correct since it's likley that OpenAPS has already corrected. Also be sure to check that `wide_bg_target_range: false` is set in `edit-pref`.
+
 ### xDripAPS - offline looping for users of the xDrip+ Android app
 
 Do you use OpenAPS and the xDrip+ Android app? By deafult, the xDrip+ Android app uploads CGM data to an online Nightscout instance, OpenAPS then downloads this data for use in your online loop. 
